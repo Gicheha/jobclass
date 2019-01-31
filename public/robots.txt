@@ -1,0 +1,15 @@
+User-agent: *
+Disallow:
+
+Allow: /
+
+User-agent: *
+Disallow: /admin/
+Disallow: /ajax/
+Disallow: /assets/
+Disallow: /css/
+Disallow: /js/
+Disallow: /vendor/
+
+Sitemap: http://localhost:8000/en/ad/sitemaps.xml?d=AD
+Sitemap: http://localhost:8000/en/in/sitemaps.xml?d=IN
