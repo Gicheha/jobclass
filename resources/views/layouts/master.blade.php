@@ -46,11 +46,13 @@
 			@if (config('services.facebook.client_id'))
 				<meta property="fb:app_id" content="{{ config('services.facebook.client_id') }}" />
 			@endif
+		    {!! MetaTag::twitterCard() !!}
 		@endif
 	@else
 		@if (config('services.facebook.client_id'))
 			<meta property="fb:app_id" content="{{ config('services.facebook.client_id') }}" />
 		@endif
+		{!! MetaTag::twitterCard() !!}
 	@endif
 	@include('feed::links')
 	@if (config('settings.seo.google_site_verification'))
@@ -62,7 +64,7 @@
 	@if (config('settings.seo.alexa_verify_id'))
 		<meta name="alexaVerifyID" content="{{ config('settings.seo.alexa_verify_id') }}" />
 	@endif
-	
+	 
 	@yield('before_styles')
 	
 	@if (config('lang.direction') == 'rtl')
