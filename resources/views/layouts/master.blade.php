@@ -36,7 +36,7 @@
 			<link rel="alternate" href="{{ LaravelLocalization::getLocalizedURL($localeCode) }}" hreflang="{{ strtolower($localeCode) }}"/>
 		@endif
 	@endforeach
-	@if (count($dnsPrefetch) > 0)
+	@if (isset($dnsPrefetch))
 		@foreach($dnsPrefetch as $dns)
 			<link rel="dns-prefetch" href="//{{ $dns }}">
 		@endforeach
@@ -46,15 +46,11 @@
 			@if (config('services.facebook.client_id'))
 				<meta property="fb:app_id" content="{{ config('services.facebook.client_id') }}" />
 			@endif
-			{!! $og->renderTags() !!}
-			{!! MetaTag::twitterCard() !!}
 		@endif
 	@else
 		@if (config('services.facebook.client_id'))
 			<meta property="fb:app_id" content="{{ config('services.facebook.client_id') }}" />
 		@endif
-		{!! $og->renderTags() !!}
-		{!! MetaTag::twitterCard() !!}
 	@endif
 	@include('feed::links')
 	@if (config('settings.seo.google_site_verification'))

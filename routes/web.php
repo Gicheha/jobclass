@@ -368,6 +368,9 @@ Route::group([
 
 		//Below funaction use for Search users/candidates
 		Route::get('search/users', array('as'=>'search-user','uses'=>'Search\UserController@index'));
+
+        //Packages
+        Route::get('packages', 'options\optionController@index')->name('browse-packages');
 	});
 });
-    Route::get('packages', 'optionController@index')->name('browse-packages');
+
