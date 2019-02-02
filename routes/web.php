@@ -371,6 +371,9 @@ Route::group([
 
         //Packages
         Route::get('packages', 'options\optionController@index')->name('browse-packages');
+        Route::get('payments', function(){
+           return view('payments.index');
+        });
 	});
 });
 
