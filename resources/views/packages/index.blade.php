@@ -91,12 +91,13 @@
         <div class="tab-pane" id="package">
             @include('common.spacer')
             <form method="post" action="" role="form" class="pagination-centered">
-                <div class="row">    
+                <div class="form-group">    
                     <div class="form-group text-center">
                         <div class="form-group mb-2"><input type="text" class="form-control" name="Name" required placeholder="Name" /></div>
                         <div class="form-group mb-2"><input type="email" class="form-control" name="Email" required placeholder="Email"/></div>
                         <div class="form-group mb-2"><input type="text" class="form-control input-normal" name="Mobile" required placeholder="Mobile No"/></div>
                         <div class="form-group mb-2"><select name="interest" class="form-control">
+                            <option value=null> Choose Prefered Package</option>
                             @foreach($packages as $key => $package)
                                 <option value="{{$package->name}}">{{$package->name}}</option>
                             @endforeach

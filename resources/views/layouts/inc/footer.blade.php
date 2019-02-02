@@ -216,7 +216,7 @@ if (
 					@endif
 					
 					<div class="copy-info text-center">
-						© {{ date('Y') }} {{ config('settings.app.app_name') }}. {{ t('All Rights Reserved') }}.
+						© {{ date('Y') }} . {{ t('All Rights Reserved') }}.
 						@if (!config('settings.footer.hide_powered_by'))
 							@if (config('settings.footer.powered_by_info'))
 								{{ t('Powered by') }} {!! config('settings.footer.powered_by_info') !!}
