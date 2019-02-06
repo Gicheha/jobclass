@@ -56,9 +56,8 @@ if (getSegment(1) != trans('routes.countries')) {
 				{{-- Logo --}}
 				<a href="{{ lurl('/') }}" class="navbar-brand logo logo-title">
 					<img src="{{url('images/home_icon.png') . getPictureVersion() }}"
-						 alt="{{ strtolower(config('settings.app.app_name')) }}" class="tooltipHere main-logo" title="" data-placement="bottom"
-						 data-toggle="tooltip"
-						 data-original-title="{!! isset($logoLabel) ? $logoLabel : '' !!}"/>
+						 alt="Home" class="tooltipHere main-logo" title="" data-placement="bottom"
+						 data-toggle="tooltip"/>
 				</a>
 			</div>
 			<div class="navbar-collapse collapse">
